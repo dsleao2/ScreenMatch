@@ -1,25 +1,32 @@
 public class Filme {
    String name;
    int anoDeLancamento;
-   boolean incluidoNoPlano;
-   double somaDasAvaliacoes;
-   int totalDeAvaliacao;
    int duracaoEmMinutos;
+   boolean incluidoNoPlano;
+   private double somaDasAvaliacoes;
+   private int totalDeAvaliacoes;
 
+
+   int getTotalDeAvaliacao(){
+      return totalDeAvaliacoes;
+   }
 
    void exibirFichaTecnica (){
-      System.out.println("O nome do filme é :" + name);
-      System.out.println(" o ano do filme é :" +anoDeLancamento);
+      System.out.println("Nome do filme: " + name);
+      System.out.println("Ano de lançamento: " + anoDeLancamento);
+      System.out.println("Duração em minutos: " + duracaoEmMinutos);
+      System.out.println("Incluido no plano: " + incluidoNoPlano);
    }
 
    void avalia(double nota){
       somaDasAvaliacoes += nota;
-      totalDeAvaliacao ++;
+      totalDeAvaliacoes++;
    }
 
    double pegaMedia(){
-      return somaDasAvaliacoes/totalDeAvaliacao;
+
+      return somaDasAvaliacoes/totalDeAvaliacoes;
    }
 
-    }
+     }
 
